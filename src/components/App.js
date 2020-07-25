@@ -5,6 +5,7 @@ import '../styles/App.css';
 import { TOKEN_KEY, USER_NAME } from '../constants';
 
 class App extends Component{
+
     state = {
         isLoggedIn: Boolean(localStorage.getItem(TOKEN_KEY)),
     }
