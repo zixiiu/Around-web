@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Around-web/static/css/main.a88fe8c7.chunk.css",
+    "main.js": "/Around-web/static/js/main.7433bc8f.chunk.js",
+    "main.js.map": "/Around-web/static/js/main.7433bc8f.chunk.js.map",
+    "runtime-main.js": "/Around-web/static/js/runtime-main.ed07f724.js",
+    "runtime-main.js.map": "/Around-web/static/js/runtime-main.ed07f724.js.map",
+    "static/css/2.48db8b0f.chunk.css": "/Around-web/static/css/2.48db8b0f.chunk.css",
+    "static/js/2.803d2c7e.chunk.js": "/Around-web/static/js/2.803d2c7e.chunk.js",
+    "static/js/2.803d2c7e.chunk.js.map": "/Around-web/static/js/2.803d2c7e.chunk.js.map",
+    "index.html": "/Around-web/index.html",
+    "precache-manifest.d6d7c3a4f530ed706a2c9993ce950e02.js": "/Around-web/precache-manifest.d6d7c3a4f530ed706a2c9993ce950e02.js",
+    "service-worker.js": "/Around-web/service-worker.js",
+    "static/css/2.48db8b0f.chunk.css.map": "/Around-web/static/css/2.48db8b0f.chunk.css.map",
+    "static/css/main.a88fe8c7.chunk.css.map": "/Around-web/static/css/main.a88fe8c7.chunk.css.map",
+    "static/js/2.803d2c7e.chunk.js.LICENSE.txt": "/Around-web/static/js/2.803d2c7e.chunk.js.LICENSE.txt",
+    "static/media/blue-marker.svg": "/Around-web/static/media/blue-marker.bc8cc4ea.svg",
+    "static/media/logo.svg": "/Around-web/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed07f724.js",
+    "static/css/2.48db8b0f.chunk.css",
+    "static/js/2.803d2c7e.chunk.js",
+    "static/css/main.a88fe8c7.chunk.css",
+    "static/js/main.7433bc8f.chunk.js"
+  ]
+}
