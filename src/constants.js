@@ -1,4 +1,6 @@
 export const TOKEN_KEY = 'TOKEN_KEY';
+export const USER_NAME = 'USER_NAME';
+
 export const API_ROOT = "https://effective-brook-280917.wn.r.appspot.com";
 
 export const GEO_OPTIONS = {

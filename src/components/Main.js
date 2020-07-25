@@ -8,13 +8,15 @@ import Home from './Home';
 
 class Main extends Component {
     getLogin = () => {
-        return this.props.isLoggedIn ? <Redirect to="/home"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
+        return this.props.isLoggedIn ? <Redirect to="/"/> : <Login handleLoginSucceed={this.props.handleLoginSucceed}/>;
     }
 
 
     getHome = () => {
-        return this.props.isLoggedIn ? <Home/> : <Redirect to="/login"/>;
+        // return this.props.isLoggedIn ? <Home/> : <Redirect to="/login"/>;
+        return <Home isLoggedIn={this.props.isLoggedIn}/>
     }
+
 
 
     render() {
@@ -24,7 +26,7 @@ class Main extends Component {
                 <Switch>
                     <Route path="/login" render={this.getLogin}/>
                     <Route path="/register" component={Register}/>
-                    <Route path="/home" render={this.getHome}/>
+                    <Route path="/" render={this.getHome}/>
                 </Switch>
             </div>
         );

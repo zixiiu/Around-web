@@ -2,17 +2,23 @@ import React, {Component} from 'react';
 import { Modal, Button, message } from 'antd';
 import { API_ROOT, AUTH_HEADER, TOKEN_KEY, POS_KEY } from '../constants';
 import CreatePostForm from './CreatePostForm';
+import {Redirect} from "react-router-dom";
 
 
 class CreatePostButton extends Component {
     state = {
         visible: false,
         confirmLoading: false,
+        isLoggedIn: true,
     };
 
     showModal = () => {
+        // if (!this.props.isLoggedIn){
+        //     return <Redirect to='/login'/>
+        // }
         this.setState({
             visible: true,
+            isLoggedIn : this.props.isLoggedIn
         });
     };
 
@@ -71,7 +77,10 @@ class CreatePostButton extends Component {
     };
 
     render() {
-        const { visible, confirmLoading } = this.state;
+        const { visible, confirmLoading ,isLoggedIn } = this.state;
+        if (!isLoggedIn){
+            return <Redirect to='/login'/>
+        }
         return (
             <div>
                 <Button type="primary" onClick={this.showModal}>

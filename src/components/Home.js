@@ -28,6 +28,7 @@ class Home extends Component {
         isLoadingPosts: false,
         error: '',
         posts: [],
+        topic: TOPIC_AROUND
     }
 
     componentDidMount() {
@@ -83,19 +84,42 @@ class Home extends Component {
             });
     }
 
+    loadPostsByTopic = (center, radius) => {
+        if (this.state.topic === TOPIC_AROUND) {
+            return this.loadNearbyPosts(center, radius);
+        } else {
+            return this.loadFacesAroundTheWolrd();
+        }
+    }
+
+    getMeta(url) {
+        var wid, hei
+        var img = new Image();
+        img.onload = function(){
+            //alert( this.width+' '+ this.height );
+            wid = this.width
+            hei = this.height
+        };
+        img.src = url;
+        return wid, hei
+    }
+
 
     renderImagePosts() {
         const {posts} = this.state;
         const images = posts
             .filter((post) => post.type === POST_TYPE_IMAGE)
             .map((post) => {
+
+
+                var wid, hei = this.getMeta(post.url)
                 return {
                     user: post.user,
                     src: post.url,
                     thumbnail: post.url,
                     caption: post.message,
-                    thumbnailWidth: 400,
-                    thumbnailHeight: 300,
+                    thumbnailWidth: hei/500*wid,
+                    thumbnailHeight: 500,
                 };
             });
         return <Gallery images={images}/>
@@ -174,7 +198,7 @@ class Home extends Component {
 
     render() {
         // const operations = <Button type="primary">Create New Post</Button>;
-        const operations = <CreatePostButton loadNearbyPosts={this.loadNearbyPosts}/>;
+        const operations = <CreatePostButton loadNearbyPosts={this.loadPostsByTopic} isLoggedIn = {this.props.isLoggedIn}/>;
         return (
             <div>
                 <Radio.Group onChange={this.handleTopicChange} value={this.state.topic}>
@@ -196,6 +220,7 @@ class Home extends Component {
                             mapElement={<div style={{height: `100%`}}/>}
                             posts={this.state.posts}
                             loadNearbyPosts={this.loadNearbyPosts}
+                            loadPostsByTopic={this.loadPostsByTopic}
                         />
                     </TabPane>
                 </Tabs>
