@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "14632153afeefbcadadcadc9b6a9f660",
+    "revision": "abff35229e4b40e2a7eee2bbb81c0678",
     "url": "/Around-web/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Around-web/static/css/2.48db8b0f.chunk.css"
   },
   {
-    "revision": "c392ae356658b7b77e2a",
+    "revision": "2a0adcfc2969184a3cef",
     "url": "/Around-web/static/css/main.a88fe8c7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Around-web/static/js/2.803d2c7e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c392ae356658b7b77e2a",
-    "url": "/Around-web/static/js/main.7433bc8f.chunk.js"
+    "revision": "2a0adcfc2969184a3cef",
+    "url": "/Around-web/static/js/main.13b645ed.chunk.js"
   },
   {
     "revision": "b723e11cd1909fd0eedb",
